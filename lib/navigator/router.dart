@@ -1,30 +1,13 @@
-// lib/navigator/router.dart
 import 'package:go_router/go_router.dart';
-import 'root_constants.dart'; // root_constants.dart が作成された後に有効化
+import 'package:start_app/presentation/pages/counter/counter_page.dart';
+import 'root_constants.dart';
 
-// TODO: Define your routes here
 final GoRouter router = GoRouter(
-  initialLocation: '/', // TODO: Set your initial location
+  initialLocation: Routes.counter,
   routes: <GoRoute>[
-    // Example route:
-    // GoRoute(
-    //   path: '/',
-    //   builder: (context, state) => const PlaceholderWidget(), // Replace with your actual screen
-    // ),
+    GoRoute(
+      path: Routes.counter,
+      builder: (context, state) => const CounterPage(),
+    ),
   ],
-  // errorBuilder: (context, state) => ErrorScreen(error: state.error), // Optional error handler
 );
-
-// PlaceholderWidget for example route
-// import 'package:flutter/material.dart';
-// class PlaceholderWidget extends StatelessWidget {
-//   const PlaceholderWidget({super.key});
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Scaffold(
-//       body: Center(
-//         child: Text('Placeholder Screen'),
-//       ),
-//     );
-//   }
-// }
