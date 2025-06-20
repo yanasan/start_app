@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:start_app/application/providers/counter/counter_provider.dart';
 import 'package:start_app/application/providers/global/theme/theme_provider.dart';
+import 'package:start_app/application/providers/global/loading/loading_provider.dart';
 
 class CounterPage extends ConsumerWidget {
   const CounterPage({super.key});
@@ -58,6 +59,16 @@ class CounterPage extends ConsumerWidget {
                   child: const Icon(Icons.add),
                 ),
               ],
+            ),
+            const SizedBox(height: 32),
+            ElevatedButton(
+              onPressed: () async {
+                final loadingNotifier = ref.read(loadingProvider.notifier);
+                loadingNotifier.showLoading();
+                await Future.delayed(const Duration(seconds: 2));
+                loadingNotifier.hideLoading();
+              },
+              child: const Text('ローディングテスト'),
             ),
           ],
         ),

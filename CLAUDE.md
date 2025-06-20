@@ -8,11 +8,11 @@ This is a Flutter application using modern Flutter development practices with Ri
 
 ## Development Commands
 
-**このプロジェクトではfvmを使用してFlutter 3.22.0を管理しています。**
+**このプロジェクトではfvmを使用してFlutter 3.32.0を管理しています。**
 
 ### FVM Setup
-- `fvm install 3.22.0` - Flutter 3.22.0をインストール
-- `fvm use 3.22.0` - プロジェクトでFlutter 3.22.0を使用
+- `fvm install 3.32.0` - Flutter 3.32.0をインストール
+- `fvm use 3.32.0` - プロジェクトでFlutter 3.32.0を使用
 - `fvm flutter --version` - 使用中のFlutterバージョンを確認
 
 ### Basic Flutter Commands (fvm経由)
